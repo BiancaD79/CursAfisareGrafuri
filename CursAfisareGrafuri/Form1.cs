@@ -29,11 +29,20 @@ namespace CursAfisareGrafuri
             graph.GreedyColoring();
             graph.Draw(grf);
             pictureBox1.Image = bmp;
+            /*
             List<string> test = graph.Debug();
             foreach (string s in test)
             {
                 listBox1.Items.Add(s);
             }
+            */
+            
+            List<string> test = graph.HamiltonianGraph();
+            foreach (string s in test)
+            {
+                listBox1.Items.Add(s);
+            }
+            
         }
     }
 }
