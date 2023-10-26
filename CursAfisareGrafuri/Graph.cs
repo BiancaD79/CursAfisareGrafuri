@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -95,6 +96,66 @@ namespace CursAfisareGrafuri
             {
                 vertices[i].fillColor = defaultColors[colors[i]];
             }
+        }
+
+        public List<int[]> permutations = new List<int[]>();
+
+        public List<string> HamiltonianGraph()
+        {
+            List<string> toRet = new List<string>();
+
+            int[] s = new int[vertices.Count];
+            bk(s, 0);
+
+            List<int[]> verticiesPerm = permutations;
+
+            
+            foreach(var perm in verticiesPerm)
+            {
+                bool ok = true;
+                for (int i=0;i<perm.Length-1;i++)
+                {
+                    
+                    if (ma[perm[i],perm[i+1]]==false)
+                    {
+                        ok = false;
+                        break;
+                    }
+                }
+                if (ok)
+                {
+                    toRet.Add(String.Join(" ", perm));
+                }
+            }
+            
+
+            return toRet;
+        }
+
+        public void bk(int[] s,int k)
+        {
+            for (int i = 0; i < s.Length; i++)
+            {
+                s[k] = i;
+                if (valid(s,k))
+                    if (k == s.Length-1)
+                    {
+                        List<int> sol = new List<int>();
+                        for (int j = 0; j < s.Length; j++)
+                            sol.Add(s[j]);
+                        permutations.Add(sol.ToArray());
+                    }
+                else
+                    bk(s, k + 1);
+            }
+        }
+
+        bool valid(int[] s,int k)
+        {
+            for (int i = 0; i < k; i++)
+                if (s[i] == s[k])
+                    return false;
+            return true;
         }
 
     }
