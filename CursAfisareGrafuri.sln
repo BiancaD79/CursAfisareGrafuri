@@ -5,6 +5,10 @@ VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursAfisareGrafuri", "CursAfisareGrafuri\CursAfisareGrafuri.csproj", "{7932FACA-E799-455B-86BD-7CCF46F33C10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFS_DFS", "BFS_DFS\BFS_DFS.csproj", "{4E4A0F44-8402-4C84-9B5D-0CD03DB13FBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrafComplet", "GrafComplet\GrafComplet.csproj", "{2A1ECB48-FBF4-4B7F-8A0B-A32CB2C96F1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7932FACA-E799-455B-86BD-7CCF46F33C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7932FACA-E799-455B-86BD-7CCF46F33C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7932FACA-E799-455B-86BD-7CCF46F33C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E4A0F44-8402-4C84-9B5D-0CD03DB13FBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E4A0F44-8402-4C84-9B5D-0CD03DB13FBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E4A0F44-8402-4C84-9B5D-0CD03DB13FBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E4A0F44-8402-4C84-9B5D-0CD03DB13FBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A1ECB48-FBF4-4B7F-8A0B-A32CB2C96F1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A1ECB48-FBF4-4B7F-8A0B-A32CB2C96F1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A1ECB48-FBF4-4B7F-8A0B-A32CB2C96F1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A1ECB48-FBF4-4B7F-8A0B-A32CB2C96F1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
