@@ -4,12 +4,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.VisualStyles;
 
 namespace GrafComplet
 {
     internal class Algorithm
     {
         List<MyPoint> points;
+        Graph graph;
         public Algorithm(int n)
         {
             points = new List<MyPoint>();
@@ -29,9 +31,26 @@ namespace GrafComplet
                     ConvertToVertex(i.ToString()));
             }
 
-            Graph local = new Graph(vertices);
+            graph = new Graph(vertices);
 
-            return local;
+            return graph;
         }
+        public Graph Kruskal(Graph graph)
+        {
+            Graph ACM = new Graph(graph);
+            graph.edges.Sort();
+          
+            foreach(Edge edge in graph.edges)
+            {
+                if (graph.vertices.Count - 1 == ACM.edges.Count)
+                    break;
+                ACM.AddEdge(edge);
+                if (ACM.IsCycle())
+                    ACM.RemoveEdge(edge);
+            }
+
+            return ACM;
+        }
+
     }
 }

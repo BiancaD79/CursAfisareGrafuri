@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GrafComplet
 {
-    internal class Edge
+    internal class Edge : IComparable<Edge>
     {
         public Vertex begin;
         public Vertex end;
@@ -34,6 +34,11 @@ namespace GrafComplet
             this.end = end;
             this.cost = MyMath.distEuclid(new PointF(begin.X, begin.Y) 
                 , new PointF(end.X, end.Y));
+        }
+
+        public int CompareTo(Edge other)
+        {
+            return cost.CompareTo(other.cost);
         }
 
         public void Draw(Graphics handler, string data)

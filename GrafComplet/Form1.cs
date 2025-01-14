@@ -24,7 +24,8 @@ namespace GrafComplet
         {
             algorithm = new Algorithm(20);
             Graph demo = algorithm.Action();
-            demo.Draw(graphics.grp);
+            Graph MST = algorithm.Kruskal(demo);
+            MST.Draw(graphics.grp);
             graphics.Refresh();
         }
     }

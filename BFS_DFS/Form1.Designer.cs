@@ -48,7 +48,7 @@
             this.listBox1.ItemHeight = 46;
             this.listBox1.Location = new System.Drawing.Point(852, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(278, 326);
+            this.listBox1.Size = new System.Drawing.Size(278, 556);
             this.listBox1.TabIndex = 1;
             // 
             // Form1
